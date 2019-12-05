@@ -1,0 +1,163 @@
+<ManagerScreens@ScreenManager>:
+
+    Menu:
+        id: menu
+    Sign_in:
+    Sign_up:
+
+<Menu>:
+    name: 'menu'
+    FloatLayout:
+        Label:
+            id:'label_text'
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.5,'center_y':0.7}
+            text:'Welcom!!!'
+        Button:
+            id:'Sign in'
+            size_hint:0.15,0.05
+            pos_hint:{'center_x':0.4,'center_y':0.5}
+            text:'Sign in'
+            on_release:
+                app.root.current='sign_in'
+        Button:
+            id:'Sign up'
+            size_hint:0.15,0.05
+            pos_hint:{'center_x':0.6,'center_y':0.5}
+            text:'Sign up'
+            on_release:
+                app.root.current='sign_up'
+
+<Sign_up>:
+    name:'sign_up'
+    fio:FIO
+    email:Email
+    group:Group
+    password:Password
+    password_return:Password_return
+    FloatLayout:
+        Label:
+            id:'FIO_label'
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.2,'center_y':0.7}
+            text:'FIO'
+        TextInput:
+            id: FIO
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.4,'center_y':0.7}
+            text_hint:'FIO'
+        Label:
+            id:'Email_label'
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.2,'center_y':0.6}
+            text:'Email'
+        TextInput:
+            id: Email
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.4,'center_y':0.6}
+            text_hint:'Email'
+        Label:
+            id:'Group_label'
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.2,'center_y':0.5}
+            text:'Group'
+        TextInput:
+            id: Group
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.4,'center_y':0.5}
+            text_hint:'Group'
+        Label:
+            id:'Password_label'
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.2,'center_y':0.4}
+            text:'Password'
+        TextInput:
+            id: Password
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.4,'center_y':0.4}
+            text_hint:'Password'
+        Label:
+            id:'Password_return_label'
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.2,'center_y':0.3}
+            text:'Password return'
+        TextInput:
+            id: Password_return
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.4,'center_y':0.3}
+            text_hint:'Password return'
+        Button:
+            id:'Sign_up'
+            size_hint:0.1,0.05
+            pos_hint:{'center_x':0.35,'center_y':0.2}
+            text:'Sign up'
+            on_release:
+                app.root.current=root.New_user()
+        Button:
+            id:'Menu_r'
+            size_hint:0.1,0.05
+            pos_hint:{'center_x':0.2,'center_y':0.2}
+            text:'Menu'
+            on_release:
+                app.root.current='menu'
+
+<Sign_in>:
+    name:'sign_in'
+    login:Login
+    password:password
+
+    FloatLayout:
+        Label:
+            id:login_label
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.2,'center_y':0.7}
+            text:'login'
+        TextInput:
+            id: Login
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.4,'center_y':0.7}
+            text_hint:'Login'
+        Label:
+            id:'password_login_label'
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.2,'center_y':0.6}
+            text:'Password'
+        TextInput:
+            id:password
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.4,'center_y':0.6}
+            text_hint:'password'
+        Button:
+            id:'Sign_in'
+            size_hint:0.1,0.05
+            pos_hint:{'center_x':0.35,'center_y':0.5}
+            text:'Sign in'
+            on_release:
+                root.Sign_in_user()
+        Button:
+            id:'Menu_r'
+            size_hint:0.1,0.05
+            pos_hint:{'center_x':0.2,'center_y':0.5}
+            text:'Menu'
+            on_release:
+                app.root.current='menu'
+<Container>:
+    name: 'container'
+    FloatLayout:
+        Label:
+            id:'label_text'
+            size_hint:0.2,0.2
+            pos_hint:{'center_x':0.4,'center_y':0.7}
+            text:'PARA'
+        TextInput:
+            id:'label_text'
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.6,'center_y':0.7}
+            text:'PARA'
+        Button:
+            id:'Sign up'
+            size_hint:0.2,0.05
+            pos_hint:{'center_x':0.6,'center_y':0.5}
+            text:'Otpravka on server'
+            on_release:
+                app.root.current='menu'
